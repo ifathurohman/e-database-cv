@@ -1,0 +1,14 @@
+[07-Dec-2019 08:33:19 UTC] PHP Fatal error:  Cannot redeclare TransactionOvertime::edit() in /home/alpacoid/public_html/application/controllers/TransactionOvertime.php on line 329
+[28-Jan-2020 17:12:13 Asia/Jakarta] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/alpacoid/public_html/application/models/M_main.php on line 1198
+[29-Feb-2020 10:36:14 Asia/Jakarta] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 134217736 bytes) in /home/alpacoid/public_html/application/models/M_main.php on line 1347
+[29-Feb-2020 10:36:16 Asia/Jakarta] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 134217736 bytes) in /home/alpacoid/public_html/application/models/M_main.php on line 1347
+[29-Feb-2020 10:38:30 Asia/Jakarta] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 134217736 bytes) in /home/alpacoid/public_html/application/models/M_main.php on line 1346
+[29-Feb-2020 10:38:32 Asia/Jakarta] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 134217736 bytes) in /home/alpacoid/public_html/application/models/M_main.php on line 1346
+[14-Mar-2020 15:42:51 Asia/Jakarta] PHP Fatal error:  require_once(): Failed opening required '/home/alpacoid/public_html/application/third_party/dompdf/dompdf_config.inc.php' (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home/alpacoid/public_html/application/libraries/Dompdf_gen.php on line 7
+[14-Mar-2020 16:20:09 Asia/Jakarta] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/alpacoid/public_html/application/third_party/dompdf/include/frame.cls.php on line 865
+[14-Mar-2020 16:21:12 Asia/Jakarta] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/alpacoid/public_html/application/third_party/dompdf/include/frame_decorator.cls.php on line 176
+[14-Mar-2020 16:22:03 Asia/Jakarta] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/alpacoid/public_html/application/third_party/dompdf/include/frame.cls.php on line 302
+[14-Mar-2020 16:46:24 Asia/Jakarta] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 20480 bytes) in /home/alpacoid/public_html/application/third_party/dompdf/include/cellmap.cls.php on line 440
+[14-Mar-2020 16:53:14 Asia/Jakarta] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 20480 bytes) in /home/alpacoid/public_html/application/third_party/dompdf/include/cellmap.cls.php on line 440
+[23-Mar-2020 11:38:49 UTC] PHP Fatal error:  Cannot redeclare Report::report_log_excel() in /home/alpacoid/public_html/application/controllers/Report.php on line 331
+[23-Mar-2020 11:39:01 UTC] PHP Fatal error:  Cannot redeclare Report::report_log_excel() in /home/alpacoid/public_html/application/controllers/Report.php on line 331
