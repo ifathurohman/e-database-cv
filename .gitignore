@@ -1,7 +1,7 @@
 /node_modules
-/application/config
+# /application/config
 /vendor
-/application/logs/*
+# /application/logs/*
 /attachments
 /github
 /DB
