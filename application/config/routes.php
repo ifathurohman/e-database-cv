@@ -53,6 +53,7 @@ include( BASEPATH .'database/DB.php' );
 $db =& DB();
 $query 	= $db->get('ut_menu');
 $result = $query->result();
+print_r($result); exit();
 foreach( $result as $row )
 {
     $route[$row->Url]    = $row->Root;
