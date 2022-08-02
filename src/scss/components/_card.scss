@@ -1,0 +1,111 @@
+.card, .card-group{
+    &.card-frame{
+        border: 1px solid #D7D7D7;
+        border-radius: 4px;
+        overflow: auto;
+        .card-title{
+            &.title-with-border-bottom{
+                border-bottom: 1px solid #ECECEC;
+                padding-bottom: 10px;
+            }
+            &.universal-title-with-border-bottom{
+                border-bottom: 1px solid #ECECEC;
+                padding-bottom: 10px;
+            }
+        }
+    }
+    &.collapsed-card{
+        .btn-card-collapse{
+            > .down {
+                display: none;
+            }
+            > .up {
+                display: block;
+            }
+            &.collapsing{
+                > .down {
+                    display: block;
+                }
+                > .up {
+                    display: none;
+                }
+            }
+        }
+        .collapsed-target{
+            &.collapsed{
+                height: 0px;
+                overflow: hidden;
+                padding: 0px;
+            }
+        }
+    }
+}
+
+.card-form{
+    margin-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    &.with-frame{
+        border: 1px solid #D7D7D7;
+        border-radius: 4px;
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    .card, .card-group{
+        &.card-frame{
+            .card-title{
+                &.title-with-border-bottom{
+                    border-bottom: 1px solid #ECECEC;
+                    padding-bottom: 10px;
+                }
+                &.universal-title-with-border-bottom{
+                    border-bottom: none;
+                    padding-bottom: 0px;
+                }
+            }
+        }
+    }
+    .card-form{
+        padding-left: 25px;
+        padding-right: 25px;
+        background-color: white;
+    }
+
+    .card-body{
+        .action-buttons{
+            margin-top: 50px;
+        }
+    }
+}
+
+// Just Mobile
+@media (max-width: 767.98px) {
+    .card-form{
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+        padding-left: 0px;
+        padding-right: 0px;
+        background-color: transparent;
+        &.with-frame{
+            border: none;
+            border-radius: 0px;
+        }
+        .card-header{
+            .main-card-title{
+                font-size: medium;
+            }
+        }
+    }
+    .card-body{
+        .action-buttons{
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column-reverse;
+            button{
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
