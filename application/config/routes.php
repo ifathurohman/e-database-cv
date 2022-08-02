@@ -55,7 +55,7 @@ $query 	= $db->get('ut_menu');
 $result = $query->result();
 foreach( $result as $row )
 {
-    $route[$row->url]    = $row->root;
+    $route[$row->Url]    = $row->Root;
 }
 
 
