@@ -380,10 +380,11 @@ $config['encryption_key'] = 'adaf4bfgjhaacxgyu5r453r2sfry5dfs';
 | except for 'cookie_prefix' and 'cookie_httponly', which are ignored here.
 |
 */
-$config['sess_driver'] = 'database';
+$config['sess_driver'] = 'files';
 $config['sess_cookie_name'] = 'ci_session';
+$config['sess_samesite'] = 'Lax';
 $config['sess_expiration'] = 7200;
-$config['sess_save_path'] = 'ci_sessions';
+$config['sess_save_path'] = sys_get_temp_dir();
 $config['sess_match_ip'] = FALSE;
 $config['sess_time_to_update'] = 300;
 $config['sess_regenerate_destroy'] = FALSE;
@@ -524,5 +525,3 @@ $config['rewrite_short_tags'] = FALSE;
 | Array:		array('10.0.1.200', '192.168.5.0/24')
 */
 $config['proxy_ips'] 	= '';
-$config['maps_api'] 	= "AIzaSyCtvbVF66XjdV4ayQuTz8PSiWLKCTgffmc";
-$config['firebase_api'] = "AAAATt3mTTc:APA91bGYs246K3Hv82xyR1pkXysgMIxscTbTGmCwAM7d_tseKZzFaOobU1QFycKpdfMFEtcwjuUNZ-pXJEBecOwNMx-D7YTznPr2Xg2pmbRF2Q9O3Jm3AoiQY2jb66ubXSxonyCCI_lP";
