@@ -1,2 +1,0 @@
-Dear <?= $nama ?>, <br>
-We've received a request to reset your password. If you didn't make the request, just ignore this email. Otherwise, you can reset your password using this link below. <a href="<?= $message ?>">Click Here</a> to change your password.

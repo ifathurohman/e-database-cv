@@ -1,5 +1,0 @@
-@use '../mixins' as main-mixins;
-
-.cust-btn-primary{
-    @include  main-mixins.button($primaryColor);
-}
