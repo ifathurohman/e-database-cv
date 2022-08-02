@@ -56,7 +56,7 @@ $result = $query->result();
 print_r($result); exit();
 foreach( $result as $row )
 {
-    $route[$row->Url]    = $row->Root;
+    $route[$row->url]    = $row->root;
 }
 
 
