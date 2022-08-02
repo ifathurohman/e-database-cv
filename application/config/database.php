@@ -75,12 +75,12 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'edatabasecvprod',
-	'password' => 'edatabasecvprod321@1',
-	'database' => 'edatabasecvprod',
-	'dbdriver' => 'mysqli',
-	'dbprefix' => '',
+	'hostname' => 'ec2-34-253-119-24.eu-west-1.compute.amazonaws.com',
+	'username' => 'lieyyhoukrhwmw',
+	'password' => 'e8e70d4d9eadef78ae82db224c19507448f814a6c317cddf64a3df98725a6380',
+	'database' => 'd6a7laaoud4src',
+	'dbdriver' => 'postgre',
+	'dbprefix' => 'public.',
 	'pconnect' => FALSE,
 	'db_debug' => (ENVIRONMENT !== 'production'),
 	'cache_on' => FALSE,
