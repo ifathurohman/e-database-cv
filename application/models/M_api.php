@@ -191,15 +191,12 @@ class M_api extends CI_Model {
             Type,
             Level,
             case 
-                when "Type" = 1 then 'developer'
-                when "Type" = 2 then 'super_admin'
-                when "Type" = 3 then 'company'
-                else ''
+                when Type = 2 then 'super_admin'
             end as Labels,
         ");
 
 
-        $this->db->from("ut_role");
+        $this->db->from("ut_role as role");
         if($p1 == "detail_id"):
             $p1 = "detail";
             $this->db->where("RoleID", $p2);
