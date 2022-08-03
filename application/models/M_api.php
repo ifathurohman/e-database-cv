@@ -205,8 +205,6 @@ class M_api extends CI_Model {
 
         $query = $this->db->get();
 
-        print_r($query); exit();
-
         if($p1 == "detail"):
             return $query->row();
         endif;
