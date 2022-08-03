@@ -190,9 +190,6 @@ class M_api extends CI_Model {
             Delete,
             Type,
             Level,
-            case 
-                when Type = 2 then 'super_admin'
-            end as Labels,
         ");
 
 
