@@ -134,7 +134,6 @@ class M_main extends CI_Model {
             );
             $this->session->set_userdata($data);
         endif;
-        $this->inser_log(1,1,'login');//$LogType,$Type,$Page,$Content=""
         $output = array(
             "status"    => TRUE,
             "message"   => $this->lang->line('lb_success'),
