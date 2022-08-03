@@ -74,7 +74,7 @@ class M_api extends CI_Model {
             $this->db->like('Type', 'backend');
         endif;
 
-        $this->db->order_by("ifnull(ut_menu.Index,9999)");
+        $this->db->order_by("IS NULL(ut_menu.Index,9999)");
         $query  = $this->db->get("ut_menu");
         return $query->result();
 
@@ -239,8 +239,8 @@ class M_api extends CI_Model {
             mt_employee.Web,
             mt_employee.DeviceID,
             mt_employee.Latlng,
-            ifnull(mt_employee.Nik,'') as Nik,
-            ifnull(mt_employee.Position,'') as Position,
+            IS NULL(mt_employee.Nik,'') as Nik,
+            IS NULL(mt_employee.Position,'') as Position,
             mt_employee.Password,
             mt_employee.Status,
             role.Name       as RoleName,
@@ -250,7 +250,7 @@ class M_api extends CI_Model {
             company.Status  as CompanyStatus,
             company.Image   as CompanyImage,
             company.Theme,
-            ifnull(parent.Name,'')     as parentName,
+            IS NULL(parent.Name,'')     as parentName,
             pattern.Name    as patternName,
             
             branch.Name         as branchName,
@@ -428,8 +428,8 @@ class M_api extends CI_Model {
             mt.WorkPatternID as ID,
             mt.Name,
             mt.Days,
-            ifnull(mt.Tolerance,0) as Tolerance,
-            ifnull(mt.ToleranceRemark,0) as ToleranceRemark,
+            IS NULL(mt.Tolerance,0) as Tolerance,
+            IS NULL(mt.ToleranceRemark,0) as ToleranceRemark,
             mt.Status,
         ");
 
@@ -641,11 +641,11 @@ class M_api extends CI_Model {
             $table.To,
             $table.ApproveStatus,
             $table.Remark,
-            ifnull($table.Attachment,'[]') as Attachment,
-            ifnull($table.Picture,'[]') as Picture,
+            IS NULL($table.Attachment,'[]') as Attachment,
+            IS NULL($table.Picture,'[]') as Picture,
             $table.ApproveID,
             $table.ApproveDate,
-            ifnull($table.ApproveRemark,'') as ApproveRemark,
+            IS NULL($table.ApproveRemark,'') as ApproveRemark,
 
             company.Name    as CompanyName,
             employee.Name   as EmployeeName,
@@ -654,7 +654,7 @@ class M_api extends CI_Model {
             leave.Code      as LeaveCode,
             leave.Name      as leaveName,
 
-            ifnull(case
+            IS NULL(case
                 when $table.ApproveRoleType in (1,2,3) then approve_company.Name
                 else approve_user.Name
             end,'') as ApproveBy,
@@ -760,21 +760,21 @@ class M_api extends CI_Model {
                 ck_checkin.Code as Code,ck_checkin.CheckIn  as CheckIn,
                 (case
                 	when ck_checkin.Status = 1 then 0
-                	else ifnull(ck_checkin.ApproveStatus,1)
+                	else IS NULL(ck_checkin.ApproveStatus,1)
                 end) as ApproveStatus,
-                ifnull(ck_checkout.CheckOut,'')     as CheckOut,
-                ifnull(ck_checkout.Code,'')         as CheckOutCode,
+                IS NULL(ck_checkout.CheckOut,'')     as CheckOut,
+                IS NULL(ck_checkout.Code,'')         as CheckOutCode,
                 (case
                 	when ck_checkout.Status = 1 then 0
-                	else ifnull(ck_checkout.ApproveStatus,1)
+                	else IS NULL(ck_checkout.ApproveStatus,1)
                 end) as ApproveStatusCheckOut,
-                ifnull(ck_break_start.CheckIn,'')   as BreakStart,
-                ifnull(ck_break_end.CheckIn,'')     as BreakEnd,
-                ifnull(ck_overtime_in.CheckIn,'')   as OvertimeIn,
-                ifnull(ck_overtime_out.CheckIn,'')  as OvertimeOut,
-                ifnull(ck_overtime_out.Code,'')     as OvertimeOutCode,
-                ifnull(ck_break_start.Code,'')      as BreakCode,
-                ifnull(ck_break_end.Code,'')        as BreakEndCode
+                IS NULL(ck_break_start.CheckIn,'')   as BreakStart,
+                IS NULL(ck_break_end.CheckIn,'')     as BreakEnd,
+                IS NULL(ck_overtime_in.CheckIn,'')   as OvertimeIn,
+                IS NULL(ck_overtime_out.CheckIn,'')  as OvertimeOut,
+                IS NULL(ck_overtime_out.Code,'')     as OvertimeOutCode,
+                IS NULL(ck_break_start.Code,'')      as BreakCode,
+                IS NULL(ck_break_end.Code,'')        as BreakEndCode
             from (
                 select Code,CheckIn,WorkDate,Status,ApproveStatus,EmployeeID from t_attendance where CompanyID = '$CompanyID' and EmployeeID in ($EmployeeID) and
                 WorkDate >= '$StarDate' and WorkDate <= '$EndDate' and Type = '1' group by WorkDate order by DateAdd
@@ -812,8 +812,8 @@ class M_api extends CI_Model {
         $query = $this->db->query("
             select 
                 t.Code,t.ParentCodeVisit,t.CheckIn,t.WorkDate,t.Type,t.EmployeeID,t.Latitude,t.Longitude,t.Note,t.VisitType,t.CompanyID,
-                ifnull(t.Attachment,'[]') as Attachment,
-                ifnull(t.Picture,'[]') as Picture,
+                IS NULL(t.Attachment,'[]') as Attachment,
+                IS NULL(t.Picture,'[]') as Picture,
                 employee.Name as EmployeeName,employee.Nik
             from t_attendance t
             join mt_employee employee on t.EmployeeID = employee.EmployeeID
