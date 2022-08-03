@@ -181,32 +181,32 @@ class M_api extends CI_Model {
         $CompanyID = $this->session->CompanyID;
 
         $this->db->select("
-            role.RoleID as ID,
-            role.Name,
-            role.Remark,
-            role.View,
-            role.Insert,
-            role.Update,
-            role.Delete,
-            role.Type,
-            role.Level,
+            RoleID as ID,
+            Name,
+            Remark,
+            View,
+            Insert,
+            Update,
+            Delete,
+            Type,
+            Level,
             case 
-                when role.Type = 1 then 'developer'
-                when role.Type = 2 then 'super_admin'
-                when role.Type = 3 then 'company'
+                when "Type" = 1 then 'developer'
+                when "Type" = 2 then 'super_admin'
+                when "Type" = 3 then 'company'
                 else ''
             end as Labels,
         ");
 
 
-        $this->db->from("ut_role as role");
+        $this->db->from("ut_role");
         if($p1 == "detail_id"):
             $p1 = "detail";
-            $this->db->where("role.RoleID", $p2);
+            $this->db->where("RoleID", $p2);
         elseif($p1 == "my_role"):
             $p1 = "detail";
             $RoleID = $this->session->RoleID;
-            $this->db->where("role.RoleID", $RoleID);
+            $this->db->where("RoleID", $RoleID);
         endif;
 
         $query = $this->db->get();
