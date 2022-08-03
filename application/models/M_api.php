@@ -112,11 +112,11 @@ class M_api extends CI_Model {
         
         $query = $this->db->query("
             SELECT 
-                IFNULL(mt.View, '[]')    as cView,  
-                IFNULL(mt.Insert, '[]')  as cInsert,
-                IFNULL(mt.Update, '[]')  as cUpdate,
-                IFNULL(mt.Delete, '[]')  as cDelete,
-                IFNULL(mt.Approve, '[]') as cApprove 
+                NULLIF(mt.View, '[]')    as cView,  
+                NULLIF(mt.Insert, '[]')  as cInsert,
+                NULLIF(mt.Update, '[]')  as cUpdate,
+                NULLIF(mt.Delete, '[]')  as cDelete,
+                NULLIF(mt.Approve, '[]') as cApprove 
             FROM ut_role mt WHERE RoleID = '$RoleID' $where ");
         foreach($query->result() as $b){
             $arrView    = json_decode($b->cView);
