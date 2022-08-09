@@ -464,28 +464,6 @@ class M_api extends CI_Model {
         endif;
     }
 
-    public function work_pattern_detail($p1,$p2=""){
-        $this->db->select("
-            dt.Day,
-            dt.WorkingDays,
-            dt.From,
-            dt.To,
-        ");
-        $this->db->from("mt_workpattern_detail as dt");
-        if($p1 == 'array_row'):
-            $this->db->where($p2);
-        elseif(!in_array($HakAksesType, array(1,2))):
-            $this->db->where("dt.CompanyID", $CompanyID);
-        endif;
-
-        $query = $this->db->get();
-        if(in_array($p1, array('array_row'))):
-            return $query->row();
-        else:
-            return $query->result();
-        endif;
-    }
-
     public function log($p2="",$p3="",$p4=""){
         $table = "ut_log";
 
