@@ -589,7 +589,7 @@ class M_api extends CI_Model {
         $this->db->from('ut_menu');
         if($url == "current_url"):
             $url = current_url();
-            $url = str_replace(base_url(), "", $url);
+            $url = $url ? str_replace(base_url(), "", $url): "";
             $this->db->where('Url',$url);
         else:
             $this->db->like('Url',$url);
