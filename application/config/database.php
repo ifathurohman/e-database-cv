@@ -73,17 +73,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $active_group = 'default';
 $query_builder = TRUE;
 
+$db['default']['port'] = 3306;
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'sql6.freemysqlhosting.net',
-	'dbport'   => '3306',
 	'username' => 'sql6511729',
 	'password' => 'l33yRHHy8z',
 	'database' => 'sql6511729',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
-	'pconnect' => FALSE,
-	'db_debug' => (ENVIRONMENT !== 'production'),
+	'pconnect' => TRUE,
+	'db_debug' => TRUE,
 	'cache_on' => FALSE,
 	'cachedir' => '',
 	'char_set' => 'utf8',
