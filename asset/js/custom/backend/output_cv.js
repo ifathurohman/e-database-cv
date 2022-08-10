@@ -475,7 +475,7 @@ function action_view() {
   var url_file1 =
     'https://psg4-word-view.officeapps.live.com/wv/WordViewer/request.pdf?WOPIsrc=http%3A%2F%2Fpsg4%2Dview%2Dwopi%2Ewopi%2Eonline%2Eoffice%2Enet%3A808%2Foh%2Fwopi%2Ffiles%2F%40%2FwFileId%3FwFileId%3D' +
     encode_dir1 +
-    '&access_token=1&access_token_ttl=0&z=3bb53f276da67d5802b5e231c8021ab09f68b262acce3d7366722c0fad87464d&type=printpdf&useNamedAction=1';
+    '&&&z=c3d889ae451bc5cefc051775d5904a24467671832624e37e1e21ec2a1ea85db4&type=printpdf&useNamedAction=1&usid=e0e637c6-2c18-46cb-9b41-1f6ed8002125&build=16.0.15605.41023&waccluster=PSG4';
 
   console.log(url_file1);
 
