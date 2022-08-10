@@ -32,14 +32,14 @@ class Dashboard extends CI_Controller {
     if(!$total_peg_bulan) $total_peg_bulan  	= 0;
 
     $response = array(
-      "status"			            => true,
-      "message"			            => $this->lang->line('lb_success'),
-      "list"				            => $arrData,
-      "Label"				            => $arrLabel,
+      "status"			        => true,
+      "message"			        => $this->lang->line('lb_success'),
+      "list"				    => $arrData,
+      "Label"				    => $arrLabel,
 
-      "tersedia"		            => $total_tersedia[0],
+      "tersedia"		        => $total_tersedia[0],
       "terkontrak"              => $total_terkontrak[0],
-      "tender"  		            => $total_tender[0],
+      "tender"  		        => $total_tender[0],
 
       "total_peg"               => $total_peg[0],
       "total_peg_bulan"         => $total_peg_bulan[0],
