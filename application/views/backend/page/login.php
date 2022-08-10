@@ -71,6 +71,11 @@
                         <button class="btn btn-block btn-lg btn-info btn-save btn-custom btn-rounded-cs" type="button"><?= $title ?></button>
                     </div>
                 </div>
+                 <div class="form-group text-center m-t-20">
+                    <div class="col-xs-12">
+                        <button class="btn btn-block btn-lg btn-success btn-save-demo btn-rounded-cs" type="button">Login Demo</button>
+                    </div>
+                </div>
                 <div class="form-group m-b-0">
                     <div class="col-sm-12 text-center">
 <!--                    <span class="text-custom-1 responsive">Not a member ?</span><a href="javascript:void(0)" id="to-register" class="text-custom-2"> Register Now</a> -->
