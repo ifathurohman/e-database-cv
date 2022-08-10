@@ -18712,8 +18712,8 @@ fieldset:disabled a.btn {
 }
 
 .btn-primary {
-	background-color: #fb9678;
-	border-color: #fb9678
+	background-color: #4880fc;
+	border-color: #4880fc;
 }
 
 .btn-custom {
@@ -22245,7 +22245,7 @@ button.close {
 }
 
 .bg-primary {
-	background-color: #fb9678!important
+	background-color: #4880fc!important;
 }
 
 a.bg-primary:focus,
@@ -28437,7 +28437,7 @@ html {
 }
 
 a {
-	color: #fb9678
+	color: #477af8;
 }
 
 a:focus,
@@ -30905,8 +30905,8 @@ table.dataTable thead .sorting:after {
 .dataTables_wrapper .dataTables_paginate .paginate_button.current,
 .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
 	color: #fff!important;
-	border: 1px solid #fb9678;
-	background-color: #fb9678
+	border: 1px solid #477af8;
+	background-color: #477af8;
 }
 
 .dataTables_wrapper .dataTables_paginate .paginate_button.disabled,
@@ -30921,8 +30921,8 @@ table.dataTable thead .sorting:after {
 
 .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
 	color: #fff;
-	border: 1px solid #fb9678;
-	background-color: #fb9678
+	border: 1px solid #477af8;
+	background-color: #477af8;
 }
 
 .dataTables_wrapper .dataTables_paginate .paginate_button:active {
@@ -31135,7 +31135,7 @@ ul.list-inline li {
 }
 
 .page-titles .breadcrumb li.active a{
-	color: #fb9678;
+	color: #4880fc;
 }
 
 .page-titles .breadcrumb .breadcrumb-item+.breadcrumb-item::before {
