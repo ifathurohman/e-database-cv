@@ -74,7 +74,7 @@ class M_api extends CI_Model {
             $this->db->like('Type', 'backend');
         endif;
 
-        // $this->db->order_by("ifnull(ut_menu.Index,9999)");
+        $this->db->order_by("ifnull(ut_menu.Index,9999)");
         $query  = $this->db->get("ut_menu");
         return $query->result();
 
@@ -111,13 +111,13 @@ class M_api extends CI_Model {
         endif;
         
         $query = $this->db->query("
-            SELECT 
-                IFNULL(mt.View, '[]')    as cView,  
-                IFNULL(mt.Insert, '[]')  as cInsert,
-                IFNULL(mt.Update, '[]')  as cUpdate,
-                IFNULL(mt.Delete, '[]')  as cDelete,
-                IFNULL(mt.Approve, '[]') as cApprove 
-            FROM ut_role mt WHERE RoleID = '$RoleID' $where ");
+         SELECT 
+            IFNULL(mt.View, '[]')    as cView,  
+            IFNULL(mt.Insert, '[]')  as cInsert,
+            IFNULL(mt.Update, '[]')  as cUpdate,
+            IFNULL(mt.Delete, '[]')  as cDelete,
+            IFNULL(mt.Approve, '[]') as cApprove 
+        FROM ut_role mt WHERE RoleID = '$RoleID' $where ");
         foreach($query->result() as $b){
             $arrView    = json_decode($b->cView);
             $arrInsert  = json_decode($b->cInsert);
@@ -464,6 +464,28 @@ class M_api extends CI_Model {
         endif;
     }
 
+    public function work_pattern_detail($p1,$p2=""){
+        $this->db->select("
+            dt.Day,
+            dt.WorkingDays,
+            dt.From,
+            dt.To,
+        ");
+        $this->db->from("mt_workpattern_detail as dt");
+        if($p1 == 'array_row'):
+            $this->db->where($p2);
+        elseif(!in_array($HakAksesType, array(1,2))):
+            $this->db->where("dt.CompanyID", $CompanyID);
+        endif;
+
+        $query = $this->db->get();
+        if(in_array($p1, array('array_row'))):
+            return $query->row();
+        else:
+            return $query->result();
+        endif;
+    }
+
     public function log($p2="",$p3="",$p4=""){
         $table = "ut_log";
 
@@ -567,7 +589,7 @@ class M_api extends CI_Model {
         $this->db->from('ut_menu');
         if($url == "current_url"):
             $url = current_url();
-            $url = $url ? str_replace(base_url(), "", $url): "";
+            $url = str_replace(base_url(), "", $url);
             $this->db->where('Url',$url);
         else:
             $this->db->like('Url',$url);
