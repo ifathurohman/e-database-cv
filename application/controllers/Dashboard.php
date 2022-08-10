@@ -25,6 +25,12 @@ class Dashboard extends CI_Controller {
 
     $total_pegawai      = $this->db->query("SELECT YEAR(bio.DateAdd) AS tahun, COUNT(*) AS jumlah_pegawai FROM biodata AS bio GROUP BY YEAR(bio.DateAdd) ORDER BY YEAR(bio.DateAdd) desc")->result();
 
+    if(!$total_tersedia) $total_tersedia  		= 0;
+    if(!$total_terkontrak) $total_terkontrak  	= 0;
+    if(!$total_tender) $total_tender  			= 0;
+    if(!$total_peg) $total_peg  				= 0;
+    if(!$total_peg_bulan) $total_peg_bulan  	= 0;
+
     $response = array(
       "status"			            => true,
       "message"			            => $this->lang->line('lb_success'),
