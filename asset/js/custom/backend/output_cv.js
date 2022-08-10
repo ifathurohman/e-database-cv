@@ -465,7 +465,7 @@ function action_view() {
     '.docx';
 
   var url_dir =
-    'https://e-database-cv.herokuapp.com/443/file/word/' + val.id + '.docx';
+    'https://e-database-cv.herokuapp.com/file/word/' + val.id + '.docx';
   var encode_dir1 = encodeURIComponent(url_dir)
     .replace(/'/g, '%27')
     .replace(/"/g, '%22');
@@ -512,7 +512,7 @@ function action_view2() {
     '.docx';
 
   var url_dir =
-    'https://e-database-cv.herokuapp.com/443/file/word/' + val.id + '.docx';
+    'https://e-database-cv.herokuapp.com/file/word/' + val.id + '.docx';
   var encode_dir1 = encodeURIComponent(url_dir)
     .replace(/'/g, '%27')
     .replace(/"/g, '%22');
