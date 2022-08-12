@@ -375,10 +375,10 @@ class M_main extends CI_Model {
         elseif($p1 == "action_list"):
             $edit = ''; $nonactive = ''; $active = ''; $approve = ''; $rejected = ''; $view = ''; $reset_device = '';
             if(in_array('edit',$p3)):
-                $edit = '<a class="dropdown-item action-edit" onclick="action_edit()" href="javascript:;"><img src="https://dev.edatabasecv.com/img/icon/Edit_Square.png" style="margin-right: 10px;width:15px;margin-top:-2px;">'.$this->lang->line('lb_edit_data').'</a>';
+                $edit = '<a class="dropdown-item action-edit" onclick="action_edit()" href="javascript:;"><i class="fa fa-pencil-square-o"></i> '.$this->lang->line('lb_edit_data').'</a>';
             endif;
             if(in_array('edit2',$p3)):
-                $edit = '<a class="dropdown-item action-edit" onclick="action_edit2()" href="javascript:;"><img src="https://dev.edatabasecv.com/img/icon/Edit_Square.png" style="margin-right: 10px;width:15px;margin-top:-2px;">'.$this->lang->line('lb_edit_data').'</a>';
+                $edit = '<a class="dropdown-item action-edit" onclick="action_edit2()" href="javascript:;"><i class="fa fa-pencil-square-o"></i> '.$this->lang->line('lb_edit_data').'</a>';
             endif;
             if(in_array('nonactive', $p3)):
                 $nonactive = '<a class="dropdown-item action-delete" onclick="action_delete()" href="javascript:;">'.$this->lang->line('lb_nonactive').'</a>';
@@ -399,11 +399,11 @@ class M_main extends CI_Model {
             endif;
 
             if(in_array('view', $p3)):
-                $view = '<a class="dropdown-item action-view" onclick="action_view()" href="javascript:void(0)"><img src="https://dev.edatabasecv.com/img/icon/Show.png" style="margin-right: 10px;">'.$this->lang->line('lb_view').'</a>';
+                $view = '<a class="dropdown-item action-view" onclick="action_view()" href="javascript:void(0)"><i class="fa fa-eye"></i> '.$this->lang->line('lb_view').'</a>';
             endif;
 
             if(in_array('view2', $p3)):
-                $view = '<a class="dropdown-item action-view" onclick="action_view2()" href="javascript:void(0)"><img src="https://dev.edatabasecv.com/img/icon/Show.png" style="margin-right: 10px;">'.$this->lang->line('lb_view').'</a>';
+                $view = '<a class="dropdown-item action-view" onclick="action_view2()" href="javascript:void(0)"><i class="fa fa-eye"></i> '.$this->lang->line('lb_view').'</a>';
             endif;
 
             if(in_array('reset_device', $p3)):
