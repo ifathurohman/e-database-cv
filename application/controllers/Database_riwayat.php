@@ -469,6 +469,7 @@ class Database_riwayat extends CI_Controller {
 				"header2"	 	=> $arrHeader2,
 				"inputFileName" => $inputFileName,
 			);
+			print_r($output); exit();
 		endif;
 		
 		$this->main->echoJson($output);
