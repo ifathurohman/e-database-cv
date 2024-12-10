@@ -18,13 +18,13 @@ Digital Database CV
 7. Settings
 
 ## Login Form
-![image](https://drive.google.com/uc?export=view&id=1rIk24YKJN7DZdhn1DtYceXxzaZvl34ec)
+![Login Image](/img/markdown/login.png)
 
 ## Dashboard
-![image](https://drive.google.com/uc?export=view&id=1rLw6me9hpqhB9ofKlhf1RXmiImWPCkc1)
+![Dashboard Image](/img/markdown/dashboard.png)
 
 ## Output CV Word File
-![image](https://drive.google.com/uc?export=view&id=1rRdSqv6j6oW1sB7nOF1jmGvTwYB6qHDk)
+![Output Image](/img/markdown/output.png)
 
 ## Upload Database Excel File
-![image](https://drive.google.com/uc?export=view&id=1rSkKY8DUSEw4KNEtzWhA7DyXuHVdabHu)
+![Upload image](/img/markdown/upload.png)
