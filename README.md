@@ -18,7 +18,7 @@ Digital Database CV
 7. Settings
 
 ## Login Form
-![Login Image](/img/markdown/login.png)
+![Login Image](https://drive.google.com/file/d/1rIk24YKJN7DZdhn1DtYceXxzaZvl34ec/view?usp=sharing)
 
 ## Dashboard
 ![Dashboard Image](/img/markdown/dashboard.png)
